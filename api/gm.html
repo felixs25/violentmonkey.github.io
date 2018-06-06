@@ -300,6 +300,9 @@
 <li><p><code>details.responseType</code> <em>string</em></p>
 <p>One of <code>json</code>, <code>blob</code> and <code>arraybuffer</code>.</p>
 </li>
+<li><p><code>details.timeout</code> <em>integer</em> <em>v2.9.5+</em></p>
+<p>Time to wait for the request, none by default.</p>
+</li>
 <li><p><code>details.data</code> <em>string | formdata</em></p>
 <p>Data to send with the request, usually for <code>POST</code> and <code>PUT</code> requests.</p>
 </li>
@@ -354,6 +357,33 @@
 </li>
 <li><p><code>context</code></p>
 <p>The same object passed to the original request.</p>
+</li>
+</ul>
+<h3 id="GM-download"><a href="#GM-download" class="headerlink" title="GM_download"></a>GM_download</h3><p><em>v2.9.5+</em></p>
+<p>Download a URL and save it as a local file.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GM_download(options)</span><br><span class="line"><span class="comment">// or</span></span><br><span class="line">GM_download(url, name)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><code>options</code></p>
+<p>An object with following properties:</p>
+<ul>
+<li><p><code>options.url</code> <em>string required</em></p>
+<p> The URL to download.</p>
+</li>
+<li><p><code>options.name</code> <em>string</em></p>
+<p> The filename to save as.</p>
+</li>
+<li><p><code>options.onload</code> <em>function</em></p>
+<p> The function to call when download started successfully.</p>
+</li>
+</ul>
+<p>Properties below is the same as those for <code>GM_xmlhttpRequest</code>:</p>
+<ul>
+<li><code>options.headers</code> <em>object</em></li>
+<li><code>options.timeout</code> <em>integer</em></li>
+<li><code>options.onerror</code> <em>function</em></li>
+<li><code>options.onprogress</code> <em>function</em></li>
+<li><code>options.ontimeout</code> <em>function</em></li>
+</ul>
 </li>
 </ul>
 
