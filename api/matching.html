@@ -136,7 +136,7 @@
 <h2 id="How-does-a-script-match"><a href="#How-does-a-script-match" class="headerlink" title="How does a script match?"></a>How does a script match?</h2><p>In short, a script will execute if it matches any <code>@match</code> or <code>@include</code> rule and does not match any <code>@exclude-match</code> or <code>@exclude</code> rule.</p>
 <p>Here is the long version:</p>
 <ul>
-<li>If any <code>@exclude-match</code> or <code>@exclude</code> rule matches, the script matches.</li>
+<li>If any <code>@exclude-match</code> or <code>@exclude</code> rule matches, the script does not match.</li>
 <li>Otherwise if any <code>@match</code> rule is defined, the script matches only if some of the <code>@match</code> rules match.</li>
 <li>If no <code>@match</code> rule is defined, we fallback to <code>@include</code> rules and the script matches only if some of the <code>@include</code> rules match.</li>
 <li>If neither <code>@match</code> nor <code>@include</code> rule is defined, the script is assumed to match.</li>
