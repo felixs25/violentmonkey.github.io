@@ -102,6 +102,7 @@
 <h2 id="match-exclude-match"><a href="#match-exclude-match" class="headerlink" title="@match / @exclude-match"></a>@match / @exclude-match</h2><p>It is recommended to use <code>@match</code> / <code>@exclude-match</code> rather than <code>@include</code> / <code>@exclude</code> because the <em>match</em> rules are safer and more strict.</p>
 <p><code>@match</code> defines a URL matching rule. <code>@exclude-match</code> defines a match rule but used to exclude the matched URLs, similar to <code>@exclude</code>.</p>
 <p>For more details, see the document on <a href="https://developer.chrome.com/extensions/match_patterns" target="_blank" rel="noopener">Match Patterns</a> for Chrome extensions.</p>
+<p>Note that match patterns only work on scheme, host and path, i.e. match patterns always ignore query string and hash.</p>
 <p>Examples:</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// @match *://*/*</span></span><br><span class="line"><span class="comment">// @exclude-match *://*.tk/*</span></span><br></pre></td></tr></table></figure>
 <h2 id="include-exclude"><a href="#include-exclude" class="headerlink" title="@include / @exclude"></a>@include / @exclude</h2><p>Each <code>@include</code> and <code>@exclude</code> rule can be the following:</p>
